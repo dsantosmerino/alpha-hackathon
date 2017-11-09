@@ -47,6 +47,8 @@ gem 'webpacker', '~> 3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'slim-rails'
+
 group :development, :test do
   # Use Pry to debug
   gem 'pry-rails'
