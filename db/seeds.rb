@@ -73,26 +73,45 @@ application_telegram = Source.create(
   parent: generic_chat
 )
 
+application_whatsapp = Source.create(
+  category: 'application',
+  name: 'WhatsApp',
+  display_name: 'WhatsApp',
+  parent: generic_chat
+)
+
 client_ios_telegram = Source.create(
   category: 'client',
   name: 'ph.telegra.Telegraph',
-  display_name: 'Telegram',
+  display_name: 'Telegram iOS',
   client_type: 'ios',
+  icon_url: 'https://pbs.twimg.com/media/C90UDF2XsAAh_9h.png',
   parent: application_telegram
 )
 
 client_ios_imessage = Source.create(
   category: 'client',
   name: 'com.apple.MobileSMS',
-  display_name: 'iMessage',
+  display_name: 'iMessage iOS',
   client_type: 'ios',
+  icon_url: 'http://icons.iconarchive.com/icons/johnathanmac/mavrick/512/iMessage-icon.png',
   parent: application_imessage
 )
 
 client_web_twitter = Source.create(
   category: 'client',
   name: 'twitter',
-  display_name: 'Twitter',
+  display_name: 'Twitter Web',
   client_type: 'chrome-extension',
+  icon_url: 'http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Twitter-icon.png',
   parent: application_twitter
+)
+
+client_android_whatsapp = Source.create(
+  category: 'client',
+  name: 'com.whatsapp',
+  display_name: 'WhatsApp Android',
+  client_type: 'android',
+  icon_url: 'http://www.freepngimg.com/download/whatsapp/4-2-whatsapp-transparent.png',
+  parent: application_whatsapp
 )
