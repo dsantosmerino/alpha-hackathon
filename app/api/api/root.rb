@@ -9,5 +9,15 @@ module  API
         present :ok
       end
     end
+
+    resource :texts do
+      params do
+        requires :text, type: String, desc: 'Your text.'
+      end
+
+      post do
+        Texts::ToneAnalyzeService.call(text: params[:text])
+      end
+    end
   end
 end

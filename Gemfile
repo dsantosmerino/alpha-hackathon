@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'grape'
 # Use Hashie Forbidden Attributes to allow the use of Grape's own params validation
 gem 'hashie-forbidden_attributes'
+# Use RESTClient as HTTP and REST client
+gem 'rest-client'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
