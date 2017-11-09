@@ -4,7 +4,7 @@ module Inputs
 
     def call
       tones = Texts::ToneAnalyzeService.call(text: content)
-      source = Sources::FindByClientService.call(
+      source = Sources::FindOrCreateByClientService.call(
         client_type: client_type, application: application
       )
       create_input(tones: tones, source: source)
