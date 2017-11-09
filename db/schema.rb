@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109151138) do
+ActiveRecord::Schema.define(version: 20171109180130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 20171109151138) do
     t.string "application"
     t.string "client_type"
     t.string "tones"
+    t.bigint "user_id"
     t.bigint "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["source_id"], name: "index_inputs_on_source_id"
+    t.index ["user_id"], name: "index_inputs_on_user_id"
   end
 
   create_table "sources", force: :cascade do |t|
@@ -36,6 +38,14 @@ ActiveRecord::Schema.define(version: 20171109151138) do
     t.datetime "updated_at", null: false
     t.string "ancestry"
     t.index ["ancestry"], name: "index_sources_on_ancestry"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "avatar_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

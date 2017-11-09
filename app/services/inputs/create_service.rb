@@ -16,10 +16,11 @@ module Inputs
       Input.create!(
         content: content, tones: tones,
         application: application, client_type: client_type,
-        source: source
+        source: source,
+        user: user
       )
     end
 
-    attr_accessor :content, :application, :client_type
+    attr_accessor :content, :application, :client_type, :user
   end
 end

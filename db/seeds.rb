@@ -6,6 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+jose_user = User.create(
+  id: 1,
+  first_name: 'Jose Luis',
+  last_name: 'López',
+  avatar_url: 'https://ca.slack-edge.com/T1C3D47HB-U2XD02KMZ-2554ba5e6b9e-128'
+)
+
+guillem_user = User.create(
+  id: 2,
+  first_name: 'Guillem',
+  last_name: 'Roca',
+  avatar_url: 'https://ca.slack-edge.com/T1C3D47HB-U2C3WPMS6-eda9b247f53c-128'
+)
+
+jose_user = User.create(
+  id: 3,
+  first_name: 'Gorka',
+  last_name: 'Pitarch',
+  avatar_url: 'https://ca.slack-edge.com/T1C3D47HB-U7J9M089Y-g76a762c16f8-128'
+)
+
 generic_chat = Source.create(
   category: 'generic',
   name: 'Chat',
