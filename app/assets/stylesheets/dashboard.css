@@ -1,0 +1,25 @@
+.mood-button-container {
+  width: 100%;
+  text-align: center;
+}
+
+.mood-button {
+  background-color: #c8c8c8;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.mood-selected-container {
+  width: 100%;
+  text-align: center;
+}
+
+.mood-selected {
+  font-size: 50px;
+  width: 100%;
+}
