@@ -29,7 +29,9 @@ ActiveRecord::Schema.define(version: 20171109151138) do
   create_table "sources", force: :cascade do |t|
     t.string "category"
     t.string "name"
+    t.string "display_name"
     t.string "icon_url"
+    t.string "client_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
