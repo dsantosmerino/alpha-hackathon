@@ -25,6 +25,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Use Grape as REST-like API framework
+gem 'grape'
+# Use Hashie Forbidden Attributes to allow the use of Grape's own params validation
+gem 'hashie-forbidden_attributes'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
