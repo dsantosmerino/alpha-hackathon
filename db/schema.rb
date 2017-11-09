@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109134057) do
+ActiveRecord::Schema.define(version: 20171109151138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,20 @@ ActiveRecord::Schema.define(version: 20171109134057) do
     t.string "application"
     t.string "client_type"
     t.string "tones"
+    t.bigint "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["source_id"], name: "index_inputs_on_source_id"
+  end
+
+  create_table "sources", force: :cascade do |t|
+    t.string "category"
+    t.string "name"
+    t.string "icon_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_sources_on_ancestry"
   end
 
 end

@@ -35,6 +35,8 @@ gem 'grape-entity'
 gem 'hashie-forbidden_attributes'
 # Use RESTClient as HTTP and REST client
 gem 'rest-client'
+# Use Ancestry to generate db trees
+gem 'ancestry'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
