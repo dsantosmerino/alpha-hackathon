@@ -13,8 +13,7 @@ module Texts
         headers: {
           params: {
             text: text,
-            version: '2017-09-21',
-            tones: 'emotion'
+            version: '2017-09-21'
           }
         }
       ).execute
