@@ -37,6 +37,8 @@ gem 'hashie-forbidden_attributes'
 gem 'rest-client'
 # Use Ancestry to generate db trees
 gem 'ancestry'
+# Use Webpacker to use Webpack
+gem 'webpacker', '~> 3.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
