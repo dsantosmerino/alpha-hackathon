@@ -29,6 +29,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Grape as REST-like API framework
 gem 'grape'
+# Use GrapeEntity as a JSON presenter
+gem 'grape-entity'
 # Use Hashie Forbidden Attributes to allow the use of Grape's own params validation
 gem 'hashie-forbidden_attributes'
 # Use RESTClient as HTTP and REST client

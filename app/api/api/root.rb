@@ -10,16 +10,22 @@ module  API
       end
     end
 
-    resource :texts do
+    resource :inputs do
       params do
-        requires :text, type: String, desc: 'Text to analyze'
+        requires :content, type: String, desc: 'Text to analyze'
         requires :application, type: String, desc: 'Related application/package'
         requires :client_type, type: String, desc: 'Related client identifier',
                                values: ['android', 'ios', 'chrome-extension']
       end
 
       post do
-        Texts::ToneAnalyzeService.call(text: params[:text])
+        input = Inputs::CreateService.call(
+          content: params[:content],
+          application: params[:application],
+          client_type: params[:client_type]
+        )
+        status :ok
+        present input, with: API::Entities::Input
       end
     end
   end
