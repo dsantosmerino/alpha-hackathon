@@ -14,13 +14,14 @@ module Inputs
 
     def create_input(tones:, source:)
       Input.create!(
-        content: content, tones: tones,
         application: application, client_type: client_type,
+        content: content, tones: tones,
+        sent: sent,
         source: source,
         user: user
       )
     end
 
-    attr_accessor :content, :application, :client_type, :user
+    attr_accessor :application, :client_type, :content, :sent, :user
   end
 end

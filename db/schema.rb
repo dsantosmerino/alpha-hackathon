@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20171109180130) do
     t.string "application"
     t.string "client_type"
     t.string "tones"
+    t.boolean "sent"
     t.bigint "user_id"
     t.bigint "source_id"
     t.datetime "created_at", null: false

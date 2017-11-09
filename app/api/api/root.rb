@@ -23,6 +23,7 @@ module  API
         requires :application, type: String, desc: 'Related application/package'
         requires :client_type, type: String, desc: 'Related client identifier',
                                values: ['android', 'ios', 'chrome-extension']
+        requires :sent, type: Boolean, desc: 'True when the user has sent/publised the message'
       end
 
       post do
@@ -30,7 +31,8 @@ module  API
           content: params[:content],
           user: current_user,
           application: params[:application],
-          client_type: params[:client_type]
+          client_type: params[:client_type],
+          sent: params[:sent],
         )
         status :ok
         present input, with: API::Entities::Input
