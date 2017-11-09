@@ -12,7 +12,10 @@ module  API
 
     resource :texts do
       params do
-        requires :text, type: String, desc: 'Your text.'
+        requires :text, type: String, desc: 'Text to analyze'
+        requires :application, type: String, desc: 'Related application/package'
+        requires :client_type, type: String, desc: 'Related client identifier',
+                               values: ['android', 'ios', 'chrome-extension']
       end
 
       post do
