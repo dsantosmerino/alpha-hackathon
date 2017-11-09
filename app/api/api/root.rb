@@ -32,10 +32,22 @@ module  API
           user: current_user,
           application: params[:application],
           client_type: params[:client_type],
-          sent: params[:sent],
+          sent: params[:sent]
         )
         status :ok
         present input, with: API::Entities::Input
+      end
+
+      params do
+        requires :user_id, type: Integer, desc: 'User ID'
+      end
+
+      get 'today' do
+        input = Inputs::DailyReportService.call(
+          user: current_user
+        )
+        status :ok
+        present input, with: API::Entities::InputWithSource
       end
     end
   end
