@@ -6,13 +6,14 @@ import thunk from 'redux-thunk';
 
 import rootReducer from '../moodr/reducers';
 import App from '../moodr/App';
+import { fetchInputs } from '../moodr/actions';
 
 const store = createStore(
   rootReducer,
   applyMiddleware(thunk)
 );
 
-console.log(store.getState());
+store.dispatch(fetchInputs());
 
 render(
   <Provider store={ store }>

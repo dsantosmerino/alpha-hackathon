@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Moods from './components/Moods';
-import Inputs from './components/Inputs';
+import VisibleInputs from './containers/VisibleInputs';
 
 export default () => {
   return (
     <div>
       <Moods />
-      <Inputs />
+      <VisibleInputs />
     </div>
   )
 }

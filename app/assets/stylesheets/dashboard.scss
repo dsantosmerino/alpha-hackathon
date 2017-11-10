@@ -1,0 +1,77 @@
+.mood-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mood-button {
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  border-radius: 5px;
+  margin: 5px 10px;
+  font-size: 16px;
+  padding: 5x;
+}
+
+.mood-selected-container {
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.mood-selected {
+  font-size: 48px;
+}
+
+.stacked-bar-graph {
+  width: 100%;
+  height: 38px;
+  color:#414042;
+
+  .bar {
+    display: inline-block;
+    height:100%;
+    box-sizing: border-box;
+    float: left;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    padding: 10px;
+    opacity: 0.5;
+  }
+
+  .bar-analytical {
+    background: #264653;
+  }
+
+  .bar-fear {
+    background: #2A9D8F;
+  }
+
+  .bar-joy{
+    background: #E9C46A;
+  }
+  
+  .bar-sadness {
+    background: #F4A261;
+  }
+    
+  .bar-anger {
+    background: #E76F51;
+  }    
+    
+  .bar-confident {
+    background: #E2E874;
+  }
+   
+  .bar-tentative {
+    background: #2A859E;
+  }
+  
+  .bar.bar-selected {
+    opacity: 1;
+    border: 3px solid black;
+  }
+}

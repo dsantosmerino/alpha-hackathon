@@ -14,16 +14,22 @@ const initialState = {
   inputs: []
 }
 
+function getSelectedMood(emoji) {
+  return Object.keys(moods).find(key => moods[key] === emoji);
+}
+
 export default function(state = initialState, action) {
   switch (action.type) {
     case 'SELECT_MOOD':
       return {
         ...state,
-        selectedMood: action.mood
+        selectedMood: {
+          name: getSelectedMood(action.mood),
+          emoji: action.mood
+        }
       };
 
     case 'RECEIVE_INPUTS':
-      console.log(action)
       return {
         ...state,
         inputs: action.inputs
