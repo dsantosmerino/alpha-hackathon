@@ -23,9 +23,13 @@ li {
 
 .mood-button-container {
   margin: auto;
-  max-width: 320px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (min-width: '500px') {
+    max-width: 400px;
+  }
 }
 
 .mood-button {
