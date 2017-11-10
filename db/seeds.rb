@@ -20,7 +20,7 @@ guillem_user = User.create(
   avatar_url: 'https://ca.slack-edge.com/T1C3D47HB-U2C3WPMS6-eda9b247f53c-128'
 )
 
-jose_user = User.create(
+gorka_user = User.create(
   id: 3,
   first_name: 'Gorka',
   last_name: 'Pitarch',
@@ -115,3 +115,25 @@ client_android_whatsapp = Source.create(
   icon_url: 'http://www.freepngimg.com/download/whatsapp/4-2-whatsapp-transparent.png',
   parent: application_whatsapp
 )
+
+messages = [
+  "Hi sweetheart this is gonna be weird but i need to write some random messages, the content of these messages may vary.",
+  "but they have to be many",
+  "long story short",
+  "i guess we can be here the hole night",
+  "and that sucks because i cold be anywhere else, I am not getting as many moods as i would like to",
+  "i guess im not having such strong opinions at the moment",
+  "just wanted to let you know you suck",
+  "You suck big time, and i dont know what i need to say to get the angry emoji over here",
+  "o well the word angry made it"
+]
+
+user_jose_inputs = messages.each do |message|
+  Inputs::CreateService.call(
+    content: message,
+    user: jose_user,
+    application: client_ios_telegram.name,
+    client_type: client_ios_telegram.client_type,
+    sent: true
+  )
+end
