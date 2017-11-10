@@ -1,3 +1,11 @@
+$analytical: #264653;
+$fear: #2A9D8F;
+$joy: #E9C46A;
+$sadness: #F4A261;
+$anger: #E76F51;
+$confident: #E2E874;
+$tentative: #2A859E;
+
 * {
   font-size: 20px;
   font-family: sans-serif;
@@ -15,7 +23,7 @@ li {
 
 .mood-button-container {
   margin: auto;
-  max-width: 500px;
+  max-width: 320px;
   display: flex;
   justify-content: space-between;
 }
@@ -54,43 +62,66 @@ li {
     }
   }
 
-$analytical: #264653;
-$fear: #2A9D8F;
-$joy: #E9C46A;
-$sadness: #F4A261;
-$anger: #E76F51;
-$confident: #E2E874;
-$tentative: #2A859E;
-
   .bar-analytical {
-    background: $analytical;
+    background: rgba($analytical, .4);
+    
+        &.bar-selected {
+          background: rgba($analytical, .8);
+          border: 3px solid $analytical;
+        }
   }
 
   .bar-fear {
-    background: $fear;
+    background: rgba($fear, .4);
+    
+        &.bar-selected {
+          background: rgba($fear, .8);
+          border: 3px solid $fear;
+        }
   }
 
   .bar-joy{
-    background: $joy;
+    background: rgba($joy, .4);
+    
+        &.bar-selected {
+          background: rgba($joy, .8);
+          border: 3px solid $joy;
+        }
   }
   
   .bar-sadness {
-    background: $sadness;
+    background: rgba($sadness, .4);
+    
+        &.bar-selected {
+          background: rgba($sadness, .8);
+          border: 3px solid $sadness;
+        }
   }
     
   .bar-anger {
-    background: $anger;
+    background: rgba($anger, .4);
+    
+        &.bar-selected {
+          background: rgba($anger, .8);
+          border: 3px solid $anger;
+        }
   }    
     
   .bar-confident {
-    background: $confident;
+    background: rgba($confident, .4);
+    
+        &.bar-selected {
+          background: rgba($confident, .8);
+          border: 3px solid $confident;
+        }
   }
    
   .bar-tentative {
-    background: $tentative;
+    background: rgba($tentative, .4);
 
     &.bar-selected {
-      border: 3px solid black;
+      background: rgba($tentative, .8);
+      border: 3px solid $tentative;
     }
   }
   

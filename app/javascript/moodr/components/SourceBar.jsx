@@ -40,7 +40,7 @@ function getMoodSize(moodCount, total) {
 
 
 function SourceBar({ inputs, moods, selectMood, selectedMood, source }) {
-  const selectedInputs = getSourceMoods(source.id, inputs);
+  const selectedInputs = getSourceMoods(source.id, inputs).sort((a, b) => a.name > b.name);
   const total = getTotalMoodsCount(selectedInputs);
 
   return (

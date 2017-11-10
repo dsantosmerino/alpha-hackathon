@@ -11,8 +11,8 @@ const moods = {
 const initialState = {
   moods,
   selectedMood: {
-    name: 'fire',
-    emoji: '🔥'
+    name: '',
+    emoji: ''
   },
   inputs: []
 }
