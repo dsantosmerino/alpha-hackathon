@@ -1,9 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'redux-zero/react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-import store from '../moodr/store';
+import rootReducer from '../moodr/reducers';
 import App from '../moodr/App';
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+);
 
 console.log(store.getState());
 

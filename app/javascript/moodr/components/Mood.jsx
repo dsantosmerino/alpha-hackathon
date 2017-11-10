@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'redux-zero/react';
+import { connect } from 'react-redux';
 
-import actions from '../actions';
+import * as actions from '../actions';
 
 export default connect(null, actions)(({ emoji, selectMood }) => {
   return (
