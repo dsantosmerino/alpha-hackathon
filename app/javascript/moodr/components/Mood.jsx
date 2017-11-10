@@ -5,8 +5,8 @@ import * as actions from '../actions';
 
 export default connect(null, actions)(({ emoji, selectMood }) => {
   return (
-    <span onClick={ () => selectMood(emoji) }>
+    <button className="mood-button" onClick={ () => selectMood(emoji) }>
       { emoji }
-    </span>
+    </button>
   )
 });
