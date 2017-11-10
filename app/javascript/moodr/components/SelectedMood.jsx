@@ -10,7 +10,8 @@ export default connect(
 )(({ selectedMood }) => {
   return (
     <div className="mood-selected-container">
-      <span className="mood-selected">{ selectedMood.emoji }</span>
+      { selectedMood.emoji }
+      <p>{ selectedMood.name }</p>
     </div>
   );
 });

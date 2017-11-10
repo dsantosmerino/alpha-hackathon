@@ -1,3 +1,8 @@
+* {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -9,79 +14,84 @@ li {
 }
 
 .mood-button-container {
+  margin: auto;
+  max-width: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .mood-button {
   background-color: transparent;
   background-repeat:no-repeat;
-  border: none;
   cursor:pointer;
-  overflow: hidden;
   outline:none;
-  border-radius: 5px;
-  margin: 5px 10px;
-  font-size: 16px;
-  padding: 5x;
+  border: none;
 }
 
 .mood-selected-container {
-  min-height: 70px;
-  display: flex;
-  justify-content: center;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 3em;
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
 }
 
-.mood-selected {
-  font-size: 48px;
-}
 
 .stacked-bar-graph {
   width: 100%;
   height: 38px;
-  color:#414042;
+  display: flex;
 
   .bar {
-    display: inline-block;
     height:100%;
     box-sizing: border-box;
-    float: left;
-    font-weight: bold;
-    font-family: arial, sans-serif;
-    padding: 10px;
-    opacity: 0.5;
 
     &:hover {
       cursor: pointer;
     }
   }
 
+$analytical: #264653;
+$fear: #2A9D8F;
+$joy: #E9C46A;
+$sadness: #F4A261;
+$anger: #E76F51;
+$confident: #E2E874;
+$tentative: #2A859E;
+
   .bar-analytical {
-    background: #264653;
+    background: $analytical;
   }
 
   .bar-fear {
-    background: #2A9D8F;
+    background: $fear;
   }
 
   .bar-joy{
-    background: #E9C46A;
+    background: $joy;
   }
   
   .bar-sadness {
-    background: #F4A261;
+    background: $sadness;
   }
     
   .bar-anger {
-    background: #E76F51;
+    background: $anger;
   }    
     
   .bar-confident {
-    background: #E2E874;
+    background: $confident;
   }
    
   .bar-tentative {
-    background: #2A859E;
+    background: $tentative;
+
+    &.bar-selected {
+      border: 3px solid black;
+    }
   }
   
   .bar.bar-selected {
