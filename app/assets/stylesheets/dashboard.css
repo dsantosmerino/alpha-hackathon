@@ -1,25 +1,27 @@
 .mood-button-container {
-  width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mood-button {
-  background-color: #c8c8c8;
+  background-color: transparent;
   background-repeat:no-repeat;
   border: none;
   cursor:pointer;
   overflow: hidden;
   outline:none;
   border-radius: 5px;
-  margin: 5px;
+  margin: 5px 10px;
+  font-size: 16px;
+  padding: 5x;
 }
 
 .mood-selected-container {
-  width: 100%;
-  text-align: center;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
 }
 
 .mood-selected {
-  font-size: 50px;
-  width: 100%;
+  font-size: 48px;
 }
