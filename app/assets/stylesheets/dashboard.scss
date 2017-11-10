@@ -23,12 +23,12 @@ li {
 
 .mood-button-container {
   margin: auto;
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
 
   @media screen and (min-width: '500px') {
-    max-width: 400px;
+    max-width: 380px;
   }
 }
 
