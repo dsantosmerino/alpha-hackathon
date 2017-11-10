@@ -1,13 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import * as actions from '../actions';
 import Mood from './Mood';
 import SelectedMood from './SelectedMood';
 
 const mapToProps = ({ selectedMood, moods }) => ({ selectedMood, moods });
 
-export default connect(mapToProps, actions)(({ moods, selectedMood }) => {
+export default connect(mapToProps)(({ moods, selectedMood }) => {
   return (
     <div>
       <div className="mood-button-container">

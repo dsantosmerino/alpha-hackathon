@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import * as actions from '../actions';
 import { getAvailableSources } from '../selectors';
 
 function getSourceMoods(sourceId, inputs) {
@@ -38,24 +39,32 @@ function getMoodSize(moodCount, total) {
 }
 
 
-function SourceBar({ inputs, selectedMood, source }) {
-  const moods = getSourceMoods(source.id, inputs);
-  const total = getTotalMoodsCount(moods);
+function SourceBar({ inputs, moods, selectMood, selectedMood, source }) {
+  const selectedInputs = getSourceMoods(source.id, inputs);
+  const total = getTotalMoodsCount(selectedInputs);
 
   return (
-    <li>
-      <div className="stacked-bar-graph">
-        { moods.map((mood, i) => {
-            const size = getMoodSize(mood.count, total);
-            return (
-              <span
-                key={ i }
-                className={ `bar bar-${mood.name}` + (selectedMood.name === mood.name ? ' bar-selected' : '') }
-                style={ { width: `${size}%` } }
-              >
-              </span>
-            )
-          })}
+    <li className="Source">
+      <div className="Source__icon">
+        <img src={ source.icon_url } alt={ source.display_name } />
+      </div>
+
+      <div className="Source__bar">
+        <div className="stacked-bar-graph">
+          { selectedInputs.map((mood, i) => {
+              const size = getMoodSize(mood.count, total);
+              const emoji = moods[mood.name];
+              return (
+                <span
+                  key={ i }
+                  className={ `bar bar-${mood.name}` + (selectedMood.name === mood.name ? ' bar-selected' : '') }
+                  style={ { width: `${size}%` } }
+                  onClick={ () => selectMood(emoji) }
+                >
+                </span>
+              )
+            })}
+        </div>
       </div>
     </li>
   )
@@ -64,7 +73,8 @@ function SourceBar({ inputs, selectedMood, source }) {
 const mapStateToProps = (state, ownProps) => ({
   inputs: state.inputs,
   selectedMood: state.selectedMood,
-  source: getAvailableSources(state).find(source => source.id === ownProps.sourceId)
+  source: getAvailableSources(state).find(source => source.id === ownProps.sourceId),
+  moods: state.moods
 });
 
-export default connect(mapStateToProps)(SourceBar); 
+export default connect(mapStateToProps, actions)(SourceBar); 
