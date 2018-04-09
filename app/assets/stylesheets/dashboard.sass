@@ -1,0 +1,153 @@
+$analytical: #264653
+$fear: #2a9d8f
+$joy: #e9c46a
+$sadness: #f4a261
+$anger: #e76f51
+$confident: #e2e874
+$tentative: #2a859e
+
+*
+  font-size: 20px
+  font-family: sans-serif
+
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+
+li
+  margin-bottom: 20px
+
+
+.mood-button-container
+  margin: auto
+  display: flex
+  justify-content: space-between
+
+  @media screen and (min-width: "500px")
+    max-width: 380px
+  
+
+
+.mood-button
+  background-color: transparent
+  background-repeat: no-repeat
+  cursor: pointer
+  outline: none
+  border: none
+  margin: 0
+  padding: 0
+
+
+.mood-selected-container
+  margin: 20px 0
+  text-align: center
+  font-size: 3em
+
+  p
+    font-size: 1rem
+    margin: 0
+  
+
+
+.stacked-bar-graph
+  width: 100%
+  height: 38px
+  display: flex
+
+  .bar
+    height: 100%
+    box-sizing: border-box
+
+    &:hover
+      cursor: pointer
+    
+  
+
+  .bar-analytical
+    background: rgba($analytical, 0.4)
+
+    &.bar-selected
+      background: rgba($analytical, 0.8)
+      border: 3px solid $analytical
+    
+  
+
+  .bar-fear
+    background: rgba($fear, 0.4)
+
+    &.bar-selected
+      background: rgba($fear, 0.8)
+      border: 3px solid $fear
+    
+  
+
+  .bar-joy
+    background: rgba($joy, 0.4)
+
+    &.bar-selected
+      background: rgba($joy, 0.8)
+      border: 3px solid $joy
+    
+  
+
+  .bar-sadness
+    background: rgba($sadness, 0.4)
+
+    &.bar-selected
+      background: rgba($sadness, 0.8)
+      border: 3px solid $sadness
+    
+  
+
+  .bar-anger
+    background: rgba($anger, 0.4)
+
+    &.bar-selected
+      background: rgba($anger, 0.8)
+      border: 3px solid $anger
+    
+  
+
+  .bar-confident
+    background: rgba($confident, 0.4)
+
+    &.bar-selected
+      background: rgba($confident, 0.8)
+      border: 3px solid $confident
+    
+  
+
+  .bar-tentative
+    background: rgba($tentative, 0.4)
+
+    &.bar-selected
+      background: rgba($tentative, 0.8)
+      border: 3px solid $tentative
+    
+  
+
+  .bar.bar-selected
+    opacity: 1
+  
+
+
+.Source
+  display: flex
+  align-items: center
+
+  &__icon
+    padding-right: 10px
+
+    img
+      width: 30px
+      height: 30px
+    
+  
+
+  &__bar
+    flex-grow: 1
+  
+
